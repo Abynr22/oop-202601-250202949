@@ -6,6 +6,7 @@ import id.ac.upb.asetpinjam.config.Varian;
 public final class HelloProsedural {
 
     private HelloProsedural() {
+        
     }
 
     /**
@@ -13,7 +14,7 @@ public final class HelloProsedural {
      * Contoh bentuk: "Hello Aset-Pinjam, saya Budi (2310112345)".
      */
     public static String sapa(String nama, String nim) {
-        throw new UnsupportedOperationException("TODO minggu 1: HelloProsedural.sapa");
+        return "Hello Aset-Pinjam, Nama saya " + nama + ", Nim (" + nim + ")";
     }
 
     public static void main(String[] args) {
