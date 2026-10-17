@@ -15,9 +15,13 @@ Saya menggunakan kalimat : "Hello Aset-Pinjam, Nama saya " + nama + ", Nim (" + 
 3. Baru mengenal bahasa pemrograman Java yang menyebabkan saya sedikit kendala pada saat ngoding.
 
 ## Penggunaan AI
-Saya menggunakan Ai pada bagian: untuk membantu bagian memahami pengerjaan minggu ini, Penginstalan dan inisialisasi tools, code yang di butuhkan untuk inisialisali, dan sedikit penjelasan codingan pada pekerjaan utama.
 
-Promt utama : Bagaimana cara saya mengerjakan tugas minggu ini jelaskan dengan bahasa yang saya pahami.
+Promt utama : 
+- Alat yang dipakai: Claude, Chat GPT
+- Bagian yang dibantu AI: Saya menggunakan Ai pada bagian untuk membantu bagian memahami pengerjaan minggu ini, Penginstalan dan inisialisasi tools, code yang di butuhkan untuk inisialisali, dan sedikit penjelasan codingan pada pekerjaan utama.
+- Prompt utama: "Bagaimana cara saya mengerjakan tugas minggu ini jelaskan dengan bahasa yang saya pahami."
+- Yang saya ubah atau tolak dari saran AI, dan alasannya: Tidak ada yang saya tolak
+- Satu hal yang saya pahami lebih baik sekarang: saya belajar cara memasukan kode fungsional hello sapaan yang berbeda dan menghasilkan output yang sama, namun cara memanggil fungsinya itu berbeda.
 
 
 ## Dokumentasi
