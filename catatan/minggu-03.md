@@ -10,7 +10,7 @@ Saya mengisi tiga subclass dari `Aset`, yaitu `Ruang`, `Laptop`, dan `AlatLab`. 
 awalnya saya belum tahu apakah `getJenis()` mengembalikan `String` atau enum, dan baru jelas setelah membaca file tes. Dan sedikit kesalahan syntax pada bagian laboratorium , saya mengira menggunakan huruf "L" ternyata "l" yang menyebabkan sedkit eror pada source code.
 
 ## Penggunaan AI
-- Alat yang dipakai: Claude
+- Alat yang dipakai: Claude, Co pilot
 - Bagian yang dibantu AI: konstruktor, getter, dan `getJenis()` pada `Ruang`, `Laptop`, `AlatLab`; penjelasan konsep inheritance; dan panduan mengisi catatan ini.
 - Prompt utama:
   1. "Pada minggu ini saya disuruh ngerjain apa? dan apa itu inheritance".
