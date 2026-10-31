@@ -20,10 +20,15 @@ public class Ruang extends Aset {
        return kapasitas;
     }
 
+    
+    // TODO minggu 3: override getJenis(). Minggu 4: override hitungDenda(int).
     @Override
     public JenisAset getJenis() {
         return JenisAset.RUANG;
     }
 
-    // TODO minggu 3: override getJenis(). Minggu 4: override hitungDenda(int).
+    @Override
+    public long hitungDenda(int hariTerlambat) {
+        return super.hitungDenda(hariTerlambat) * 1; 
+    }
 }
