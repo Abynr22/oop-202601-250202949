@@ -26,7 +26,7 @@ meng-override-nya.
 ## Penggunaan AI
 - Alat yang dipakai: Claude (Penjelasan, catatan), Co pilot (code)
 - Bagian yang dibantu AI: `Aset.hitungDenda`, override `hitungDenda` di Ruang/Laptop/AlatLab,
-  dan `KatalogAset.cari` (dua overload)
+  dan `KatalogAset.cari` (dua overload).
 
 - Prompt utama:
   1. "Pada Week 4 ini apa yang saya harus kerjakan?" (disertai isi docs minggu 4)
