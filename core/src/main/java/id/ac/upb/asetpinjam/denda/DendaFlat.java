@@ -6,8 +6,8 @@ import id.ac.upb.asetpinjam.model.Aset;
 /** Minggu 5: denda tetap per hari, sama dengan aset.hitungDenda(hari). */
 public class DendaFlat implements AturanDenda {
 
-    @Override
+     @Override
     public long hitung(Aset aset, int hariTerlambat) {
-        throw new UnsupportedOperationException("TODO minggu 5: DendaFlat.hitung");
+        return aset.hitungDenda(hariTerlambat);
     }
 }

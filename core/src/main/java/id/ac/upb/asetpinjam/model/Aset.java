@@ -12,7 +12,7 @@ import id.ac.upb.asetpinjam.kontrak.DapatDipinjam;
  * Minggu 5: isi bisaDipinjam() dan ubah menjadi class abstrak
  * (TestSupport.aset(...) di folder test menyesuaikan sendiri, lihat docs/minggu-05.md).
  */
-public class Aset implements DapatDipinjam {
+public abstract class Aset implements DapatDipinjam {
     private final String kode;
     private String nama;
     private StatusAset status;
@@ -23,7 +23,7 @@ public class Aset implements DapatDipinjam {
 
     /** TODO minggu 2: kode dan nama tidak boleh null atau kosong (IllegalArgumentException). */
     public Aset(String kode, String nama) {
-         if (kode == null || kode.isBlank()) {
+        if (kode == null || kode.isBlank()) {
             throw new IllegalArgumentException("Kode tidak boleh kosong");
         }
         if (nama == null || nama.isBlank()) {
@@ -78,7 +78,7 @@ public class Aset implements DapatDipinjam {
     /** TODO minggu 5: true hanya jika status TERSEDIA dan kondisi bukan RUSAK_BERAT. */
     @Override
     public boolean bisaDipinjam() {
-        throw new UnsupportedOperationException("TODO minggu 5");
+        return status == StatusAset.TERSEDIA && kondisi != Kondisi.RUSAK_BERAT;
     }
 
     /** TODO minggu 3: dioverride tiap subclass agar mengembalikan jenis yang benar. */
@@ -86,13 +86,17 @@ public class Aset implements DapatDipinjam {
         throw new UnsupportedOperationException("TODO minggu 3");
     }
 
-    /** TODO minggu 4: denda keterlambatan. Dioverride tiap subclass (aturan di docs/aturan-bisnis.md). */
-    public long hitungDenda(int hariTerlambat) {
-    if (hariTerlambat < 0) {
-        throw new IllegalArgumentException("Hari terlambat tidak boleh negatif");
+    /** Hari x tarif varian. Dipakai subclass; menolak hari negatif. */
+    protected long dendaDasar(int hariTerlambat) {
+        if (hariTerlambat < 0) {
+            throw new IllegalArgumentException("Hari terlambat tidak boleh negatif");
+        }
+        return (long) hariTerlambat * Varian.aktif().dendaPerHari;
     }
-    return (long) hariTerlambat * Varian.aktif().dendaPerHari;
-   
+
+    /**
+     * TODO minggu 4: denda keterlambatan. Dioverride tiap subclass (aturan di docs/aturan-bisnis.md).
+     * Minggu 5: dijadikan abstrak; multiplier jenis ditentukan subclass.
+     */
+    public abstract long hitungDenda(int hariTerlambat);
 }
-}
-    
