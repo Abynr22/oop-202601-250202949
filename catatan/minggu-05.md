@@ -10,6 +10,7 @@ interface `AturanDenda` lewat `DendaFlat` (sama dengan `aset.hitungDenda(hari)`)
 - Logika hari x tarif dipindah ke `protected dendaDasar(int)` di `Aset`, karena `hitungDenda`
   sudah abstrak dan tidak bisa dipanggil lewat `super`. Subclass memanggil `dendaDasar` lalu
   mengalikan multiplier jenis (1x, 2x, 4x).
+-Rumus progresif: flat + 10% x flat x (hari - 7) untuk hari > 7 (lihat docs/asumsi.md, A-08).
 
 ## Kendala
 `hitungDenda` dan `getJenis` sempat terdefinisi dua kali dan `super.hitungDenda`
